@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+        /* 🌈 Define CSS Variables inside :root (global scope) */
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --text-color: #fff;
+            --card-bg: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --radius: 12px;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 6px var(--shadow-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            color: #333;
+            width: 280px;
+            height: 150px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 80px 20px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px var(--shadow-color);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Variables</h1>
+    <div class="card">Hover me 🌿</div>
+</body>
+
+</html>
